@@ -1,4 +1,8 @@
 # Hospital Patient & Appointment Management System
+**Live demo:** https://hospital-hms-p36z.onrender.com
+
+Demo logins: `admin / admin123` · `reception / reception123` · `doctor1 / doctor123`
+
 
 Flask + PostgreSQL + Bootstrap. Flow: **User action → Website → Flask backend → SQL/PostgreSQL → database response → Website.**
 
