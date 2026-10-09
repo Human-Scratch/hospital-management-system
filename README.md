@@ -91,5 +91,5 @@ erDiagram
 Schema is in 3NF: every non-key column depends only on its table's key; many-to-many links (medicines, tests) go through
 `prescription` / `visit_test`. `bill.total_amount` is a deliberate snapshot (computed by `fn_bill_total`) so a bill doesn't change if prices change later.
 
-## Known limitations (mention in your viva)
+## Known limitations 
 Login token is kept in browser localStorage (fine for a coursework demo; use HttpOnly cookies + CSRF protection in production); passwords are hashed (scrypt) but there is no password-reset flow; slots are fixed 30-minute blocks 09:00–16:30.
