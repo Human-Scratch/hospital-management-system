@@ -38,7 +38,7 @@ def seed(cur):
         cur.execute("""INSERT INTO doctor(name,dept_id,specialization,phone,email,consultation_fee)
                        VALUES (%s,%s,%s,%s,%s,%s) RETURNING doctor_id""",
                     (f"Dr. {FIRST[i]} {LAST[i]}", i % 6 + 1, DEPTS[i % 6], f"98000{i:05d}",
-                     f"doctor{i + 1}@hospital.test", rnd.choice([300000, 400000, 500000, 600000, 550000])))
+                     f"doctor{i + 1}@hospital.test", rnd.choice([850, 1000, 650, 800, 1200])))
         did = cur.fetchone()[0]
         docs.append(did)
         cur.execute("INSERT INTO users(username,password_hash,role,doctor_id) VALUES (%s,%s,'doctor',%s)",
